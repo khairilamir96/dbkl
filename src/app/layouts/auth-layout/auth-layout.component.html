@@ -1,0 +1,67 @@
+<nav
+  id="navbar-main"
+  class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-default"
+>
+  <div class="container ">
+    <a
+    class="navbar-brand"
+      routerLinkActive="active"
+      [routerLink]="['/presentation']"
+    >
+      <img src="assets/img/brand/dbkl.png" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="navbar-collapse navbar-custom-collapse collapse"
+      id="collapseBasic" [collapse]="isCollapsed"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/dashboards/dashboard']">
+              <img src="assets/img/brand/blue.png" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbar-collapse"
+              aria-controls="navbar-collapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              (click)="isCollapsed = !isCollapsed"
+            >
+              <span></span> <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/presentation']"
+          >
+            <span class="nav-link-inner--text">Login</span>
+          </a>
+        </li>
+      </ul>
+      <hr class="d-lg-none" />
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

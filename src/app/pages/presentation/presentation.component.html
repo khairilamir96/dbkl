@@ -1,0 +1,188 @@
+<nav
+  id="navbar-main"
+  class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-default"
+>
+  <div class="container">
+    <a
+      class="navbar-brand"
+      routerLinkActive="active"
+      [routerLink]="['/presentation']"
+    >
+      <img src="assets/img/brand/dbkl.png" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="navbar-collapse navbar-custom-collapse collapse"
+      id="collapseBasic" [collapse]="isCollapsed"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/dashboards/dashboard']">
+              <img src="assets/img/brand/blue.png" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbar-collapse"
+              aria-controls="navbar-collapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              (click)="isCollapsed = !isCollapsed"
+            >
+              <span></span> <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/examples/register']"
+          >
+            <span class="nav-link-inner--text">Register</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/dashboards']"
+          >
+            <span class="nav-link-inner--text">Admin</span>
+          </a>
+        </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLinkActive="active"
+              [routerLink]="['/bilik']"
+            >
+              <span class="nav-link-inner--text">User</span>
+            </a>
+          </li>
+        
+      </ul>
+      <hr class="d-lg-none" />
+    </div>
+  </div>
+</nav>
+<section class="section-padding text-white p-4 " style="background-image: url('assets/img/theme/tech.jpg'); background-size:cover; background-position: center center;background-attachment:fixed;">
+<div class=" main-content pt-5 pb-7">
+  <div class=" container ">
+    <div class=" row justify-content-center">
+      <div class=" col-lg-5 col-md-7">
+        <h1 class="display-2 text-white font-weight-bold mb-0">
+          DBKL E-Booking System
+        </h1>
+        <img src="assets/img/brand/dbkl.png" />
+      </div>
+      <div class=" col-lg-5 col-md-7">
+        <div class=" card bg-secondary border-0 mb-0">
+
+          <div class=" card-body px-lg-5 py-lg-5 bg-default">
+            <div class=" text-center mb-4">
+              <span>Login Here</span>
+            </div>
+
+            <form role="form">
+              <div
+                class="form-group mb-3"
+              >
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="ni ni-email-83"></i
+                    ></span>
+                  </div>
+                  <input
+                    class="form-control"
+                    placeholder="Email"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="ni ni-lock-circle-open"></i
+                    ></span>
+                  </div>
+                  <input
+                    class="form-control"
+                    placeholder="Password"
+                    type="password"
+                  />
+                </div>
+              </div>
+              <div
+                class="custom-control custom-control-alternative custom-checkbox"
+              >
+                <input
+                  class="custom-control-input"
+                  id=" customCheckLogin"
+                  type="checkbox"
+                />
+                <label class="custom-control-label" for=" customCheckLogin">
+                  <span>Remember me</span>
+                </label>
+              </div>
+              <div class="text-center">
+                <button 
+                type="button"
+                 class="btn btn-primary my-4"
+                 routerLinkActive="active"
+                 [routerLink]="['/dashboards']"
+                 >
+                  Sign in
+                </button>
+              </div>
+            </form>
+            <div class=" row mt-3">
+              <div class=" col-6">
+                <a
+                 class="nav-link text-white"
+                 routerLinkActive="active"
+                 [routerLink]="['/examples/forgot']"
+                >
+                  <small> Forgot password? </small>
+                </a>
+              </div>
+    
+              <div class=" col-6 text-right">
+                <a
+                 class="nav-link text-white"
+                 routerLinkActive="active"
+                [routerLink]="['/examples/register']"
+                >
+                  <small> Create new account </small>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+</div>
+</section>

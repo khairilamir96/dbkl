@@ -1,0 +1,172 @@
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-white d-inline-block mb-0">Semak Permohonan</h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">Semak Permohonan</h3>
+        </div>
+        <div class="dataTables_wrapper py-4">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="datatable_length">
+                <label>
+                  Tunjuk
+                  <select
+                    name="datatable_length"
+                    aria-controls="datatable"
+                    class="form-control form-control-sm"
+                    (change)="entriesChange($event)"
+                  >
+                    <option value="5" [selected]="entries == 5">5</option>
+                    <option value="25" [selected]="entries == 25">25</option>
+                    <option value="50" [selected]="entries == 50">50</option>
+                    <option value="-1" [selected]="entries == -1">All</option>
+                  </select>
+                  Rekod
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="datatable_filter" class="dataTables_filter">
+                <label>
+                  <input
+                    type="search"
+                    class="form-control form-control-sm"
+                    placeholder="Search records"
+                    aria-controls="datatable"
+                    (keyup)="filterTable($event)"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <ngx-datatable
+            class="bootstrap selection-cell"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [limit]="entries != -1 ? entries : undefined"
+            [rows]="temp"
+            (activate)="onActivate($event)"
+          >
+            <ngx-datatable-column name="nama"></ngx-datatable-column>
+            <ngx-datatable-column name="Jenis Permohonan" prop="jenispermohonan">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.jenispermohonan}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Surat Tawaran Sewa Kuarters" prop="sewakuarters">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.sewakuarters}}
+              </ng-template>
+            </ngx-datatable-column>
+			      <ngx-datatable-column name="status"></ngx-datatable-column>
+            <ngx-datatable-column name="Tindakan">
+              <ng-template ngx-datatable-cell-template let-value="value">
+                <div>
+                  <button
+                  class=" btn btn-sm btn-primary"
+                    data-target="#modal-default"
+                    data-toggle="modal"
+                    type="button"
+                    (click)="openDefaultModal(modalDefault)"
+                  >
+                    View
+                  </button>
+                  <ng-template #modalDefault>
+                    <div class=" modal-header">
+                      <h6 class=" modal-title" id="modal-title-default">
+                        Edit Permohonan
+                      </h6>
+    
+                      <button
+                        aria-label="Close"
+                        class=" close"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        <span aria-hidden="true"> × </span>
+                      </button>
+                    </div>
+    
+                    <div class=" modal-body">
+                      <input
+                         class="form-control mb-2"
+                         placeholder="Nama"
+                         type="text"
+                         (focus)="focus = true"
+                         (blur)="focus = false"
+                      />
+                      <input
+                        class="form-control mb-2"
+                        placeholder="Jenis Permohonan"
+                        type="text"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                        <input
+                                class=" form-control mb-2"
+                                id="customFileLang"
+                                lang="en"
+                                type="file"
+                              />
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> Status </option>
+      
+                        <option> Diterima </option>
+      
+                        <option> Ditolak </option>
+                      </select>
+                    </div>
+    
+                    <div class=" modal-footer">
+                      <button class=" btn btn-primary" type="button">
+                        Save changes
+                      </button>
+    
+                      <button
+                        class=" btn btn-link ml-auto"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </ng-template>
+                </div>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

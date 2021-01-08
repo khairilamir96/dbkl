@@ -1,0 +1,402 @@
+
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-white d-inline-block mb-0">Permohonan(Penyewa)</h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)"> New </a>
+
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)">
+            Filters
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-lg-12">
+      <div class=" card-wrapper">   
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Maklumat Peribadi</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <div class=" form-group">
+                <label
+                class="form-control-label"
+                  for="example-date-input"
+                >
+                  Nama
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-date-input"
+                    type="text"
+                    value="Ali Imran"
+                  />
+              </div>
+
+              <div class=" form-group">
+                <label
+                  class="form-control-label"
+                  for="example-time-input"
+                >
+                  No. KP
+                </label>
+                  <input
+                    class=" form-control"
+                    id="example-time-input"
+                    type="text"
+                    value="XXXXXX-XX-XXXX"
+                  />
+              </div>
+
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  No.Gaji/ Pesara
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="No.Gaji/ Pesara"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  Gred
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="Gred"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  Jawatan
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="Jawatan"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  Jabatan
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="Jabatan"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  No. Telefon
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="number"
+                    value=""
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  Alamat
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="Alamat"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  APC
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="text"
+                    value="APC"
+                  /> 
+              </div>
+              <div class=" form-group">
+                <label
+                  class=" form-control-label"
+                  for="example-text-input"
+                >
+                  Emel
+                </label>
+
+                  <input
+                    class=" form-control"
+                    id="example-text-input"
+                    type="email"
+                    value="Emel"
+                  /> 
+              </div>
+              <button class=" btn btn-primary" type="submit">
+                Save
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <agm-map 
+[latitude]="latitude" 
+[longitude]="longitude" 
+[zoom]="zoom" style="height:300px;">
+  <agm-marker 
+  [latitude]="latitude" 
+  [longitude]="longitude"></agm-marker>
+</agm-map>
+
+<!-- ngx datatable -->
+  <div class=" row">
+    <div class=" col">
+      <div class=" card">
+        <div class=" card-header col-lg-12">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class=" mb-0">Geotags</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <a class=" btn btn-sm btn-neutral" href="javascript:void(0)"> New </a>
+            </div>
+        </div>
+        <div class="dataTables_wrapper py-4">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="datatable_length">
+                <label>
+                  Tunjuk
+                  <select
+                    name="datatable_length"
+                    aria-controls="datatable"
+                    class="form-control form-control-sm"
+                    (change)="entriesChange($event)"
+                  >
+                    <option value="5" [selected]="entries == 5">5</option>
+                    <option value="25" [selected]="entries == 25">25</option>
+                    <option value="50" [selected]="entries == 50">50</option>
+                    <option value="-1" [selected]="entries == -1">All</option>
+                  </select>
+                  Rekod
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="datatable_filter" class="dataTables_filter">
+                <label>
+                  <input
+                    type="search"
+                    class="form-control form-control-sm"
+                    placeholder="Search records"
+                    aria-controls="datatable"
+                    (keyup)="filterTable($event)"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <ngx-datatable
+            class="bootstrap selection-cell"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [limit]="entries != -1 ? entries : undefined"
+            [rows]="temp"
+            (activate)="onActivate($event)"
+          >
+            <ngx-datatable-column name="lokasi"></ngx-datatable-column>
+            <ngx-datatable-column name="Kategori (Jenis Rumah)" prop="kategori">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                 {{row.kategori}}
+               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Harga Sewa" prop="hargasewa">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                 {{row.hargasewa}}
+               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Maklumat Unit * Bilangan Bilik" prop="maklumatunit">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                 {{row.maklumatunit}}
+               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="kemudahan"></ngx-datatable-column>
+            <ngx-datatable-column name="Had Tempoh Penginapan" prop="hadtempoh">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                 {{row.hadtempoh}}
+               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Jumlah Kekosongan" prop="jumlahkekosongan">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                 {{row.jumlahkekosongan}}
+               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Tindakan">
+              <ng-template ngx-datatable-cell-template let-value="value">
+                <div>
+                  <button
+                  class=" btn btn-sm btn-primary"
+                    data-target="#modal-default"
+                    data-toggle="modal"
+                    type="button"
+                    (click)="openDefaultModal(modalDefault)"
+                  >
+                    Edit
+                  </button>
+                  <ng-template #modalDefault>
+                    <div class=" modal-header">
+                      <h6 class=" modal-title" id="modal-title-default">
+                        Edit Permohonan
+                      </h6>
+    
+                      <button
+                        aria-label="Close"
+                        class=" close"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        <span aria-hidden="true"> × </span>
+                      </button>
+                    </div>
+    
+                    <div class=" modal-body">
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> Lokasi </option>
+      
+                        <option> Pahang </option>
+                        <option>Perak</option>
+                        <option> Kedah </option>
+                      </select>
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> Kategori </option>
+      
+                        <option> Aduan </option>
+                        <option value="">Penghargaan</option>
+                        <option> Cadangan </option>
+                      </select>
+                      <input
+                         class="form-control mb-2"
+                         placeholder="Harga Sewa"
+                         type="number"
+                         (focus)="focus = true"
+                         (blur)="focus = false"
+                      />
+                      <input
+                        class="form-control mb-2"
+                        placeholder="Maklumat Unit(Bil)"
+                        type="number"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                       <input
+                        class="form-control mb-2"
+                        placeholder="Kemudahan"
+                        type="text"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                      <input
+                        class="form-control mb-2"
+                        placeholder="Had Tempoh Penginapan"
+                        type="text"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                      <input
+                        class="form-control mb-2"
+                        placeholder="Jumlah Kekosongan"
+                        type="text"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                    </div>
+    
+                    <div class=" modal-footer">
+                      <button class=" btn btn-primary" type="button">
+                        Save changes
+                      </button>
+    
+                      <button
+                        class=" btn btn-link ml-auto"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </ng-template>
+                </div>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
